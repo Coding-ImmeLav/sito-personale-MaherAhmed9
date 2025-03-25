@@ -15,7 +15,7 @@
 * **HTML/CSS**: For web page structure and styling.
 * **JavaScript**: For interactive elements.
 * **Bootstrap**: For responsive design and styling.
-* **Jquery**: For responsive design and styling.
+* **Jquery**: For interactive elements.
 
 ## Contact
 
