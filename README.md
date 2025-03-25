@@ -7,9 +7,6 @@
 
 <p align="center">
   <a href="#technologies-used">Technologies Used</a> •
-  <a href="#key-features">Key Features</a> •
-  <a href="#how-to-use">How To Use</a> •
-  <a href="#pages">Pages</a> •
   <a href="#contact">Contact</a>
 </p>
 
