@@ -170,3 +170,17 @@ a {
 .bg-secondary { background-color: var(--secondary) !important; }
 .text-primary { color: var(--primary) !important; }
 .text-secondary { color: var(--secondary) !important; }
+
+/* Utility Classes */
+.min-vh-90 {
+    min-height: 90vh;
+}
+
+.mt-n5 {
+    margin-top: -3rem;
+}
+
+/* Add this to your existing styles */
+.h2.text-secondary {
+    color: #9fa1b3 !important;  /* A softer, more muted color that matches your theme */
+}
