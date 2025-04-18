@@ -26,7 +26,6 @@ body {
     color: var(--text);
 }
 
-/* Loader Styles */
 #loader-wrapper {
     position: fixed;
     top: 0;
@@ -66,7 +65,6 @@ body {
     to { opacity: 0.25; }
 }
 
-/* Loader bars */
 .loader [class^="bar"] {
     transform-origin: center;
     transform: rotate(var(--rotation)) translate(0, -130%);
@@ -85,7 +83,6 @@ body {
 .loader .bar11 { --rotation: 300deg; animation-delay: -0.2s; }
 .loader .bar12 { --rotation: 330deg; animation-delay: -0.1s; }
 
-/* Container Styles */
 .container-fluid {
     opacity: 0;
     transition: opacity 0.3s ease-in;
@@ -95,7 +92,6 @@ body {
     opacity: 1;
 }
 
-/* Navigation and Button Styles */
 .nav-pills .nav-link,
 .btn-primary,
 .btn-secondary,
@@ -138,20 +134,17 @@ body {
     transform: translateY(-2px) !important;
 }
 
-/* General Link Styles */
 a {
     color: var(--primary);
     transition: color 0.3s ease;
 }
 
-/* Card Styles */
 .card {
     background-color: rgba(166, 169, 193, 0.1);
     border: 1px solid var(--primary);
     color: var(--text);
 }
 
-/* Form Styles */
 .form-control {
     background-color: rgba(166, 169, 193, 0.1);
     border-color: var(--primary);
@@ -165,13 +158,11 @@ a {
     box-shadow: 0 0 0 0.2rem rgba(166, 169, 193, 0.25);
 }
 
-/* Bootstrap Overrides */
 .bg-primary { background-color: var(--primary) !important; }
 .bg-secondary { background-color: var(--secondary) !important; }
 .text-primary { color: var(--primary) !important; }
 .text-secondary { color: var(--secondary) !important; }
 
-/* Utility Classes */
 .min-vh-90 {
     min-height: 90vh;
 }
@@ -180,13 +171,34 @@ a {
     margin-top: -3rem;
 }
 
-/* Add this to your existing styles */
 .h2.text-secondary {
-    color: #9fa1b3 !important;  /* A softer, more muted color that matches your theme */
+    color: #9fa1b3 !important;
 }
 
 .sticky-top {
     background-color: var(--background) !important;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+}
+
+#cv hr.border-primary {
+    opacity: 0.2;
+}
+
+#cv h4 {
+    color: var(--primary);
+}
+
+#cv .bi {
+    color: var(--primary);
+}
+
+.glow-button {
+    box-shadow: 0 0 15px var(--primary);
+    transition: all 0.3s ease;
+}
+
+.glow-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 30px var(--primary);
 }
