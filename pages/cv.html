@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
+    <div class="animated-background"></div>
+    
     <div class="cursor-dot"></div>
     <div class="cursor-dot-outline"></div>
     
@@ -54,12 +56,12 @@
     <div class="container my-5" id="cv">
         <div class="row justify-content-center">
             <div class="col-lg-10">
-                <h1 class="display-5 text-center my-5 animate-pop">
+                <h1 class="display-5 text-center my-5 animate-scroll">
                     <i class="bi bi-file-person me-2"></i>Curriculum Vitae
                 </h1>
 
-                <div class="border border-2 border-dark p-4 rounded animate-slide-right">
-                    <div class="text-center mb-5 animate-rotate">
+                <div class="border border-2 border-dark p-4 rounded">
+                    <div class="text-center mb-5 animate-scroll">
                         <h3 class="display-6 mb-4">Ahmed Maher</h3>
                         <p class="lead mb-4">
                             <i class="bi bi-envelope me-2"></i>017700maher@gmail.com
@@ -70,10 +72,7 @@
                         </p>
                     </div>
 
-                    <hr class="border-primary opacity-25 my-5">
-
-
-                    <div class="mb-5 animate-slide-right delay-1">
+                    <div class="mb-5 animate-scroll delay-1">
                         <h4 class="display-7 mb-4"><i class="bi bi-mortarboard me-2"></i>Istruzione</h4>
                         <div class="ps-4">
                             <div class="d-flex justify-content-between align-items-center mb-3">
@@ -84,13 +83,10 @@
                         </div>
                     </div>
 
-                    <hr class="border-primary opacity-25 my-5">
-
-                    <div class="mb-5 animate-pop delay-2">
+                    <div class="mb-5 animate-scroll delay-2">
                         <h4 class="display-7 mb-4"><i class="bi bi-briefcase me-2"></i>Esperienza Lavorativa</h4>
                         
-
-                        <div class="ps-4 mb-5">
+                        <div class="ps-4 mb-5 animate-scroll delay-1">
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <h5 class="mb-0">Stage - Pine-Apple</h5>
                                 <span class="text-primary">Settembre 2024 - Dicembre 2024</span>
@@ -101,7 +97,7 @@
                             </ul>
                         </div>
 
-                        <div class="ps-4 mb-5">
+                        <div class="ps-4 mb-5 animate-scroll delay-1">
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <h5 class="mb-0">Epta S.p.A.</h5>
                                 <span class="text-primary">04/03/24 - 12/4/24</span>
@@ -113,7 +109,7 @@
                             </ul>
                         </div>
 
-                        <div class="ps-4 mb-5">
+                        <div class="ps-4 mb-5 animate-scroll delay-1">
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <h5 class="mb-0">C.F.C. Italia Srl</h5>
                                 <span class="text-primary">06/11/23 - 22/12/23</span>
@@ -125,7 +121,7 @@
                             </ul>
                         </div>
 
-                        <div class="ps-4 mb-5">
+                        <div class="ps-4 mb-5 animate-scroll delay-1">
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <h5 class="mb-0">Tec Riparo</h5>
                                 <span class="text-primary">06/11/23 - 22/12/23</span>
@@ -136,7 +132,7 @@
                             </ul>
                         </div>
 
-                        <div class="ps-4 mb-5">
+                        <div class="ps-4 mb-5 animate-scroll delay-1">
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <h5 class="mb-0">Gamma Studio</h5>
                                 <span class="text-primary">12/01/23 - 10/02/23</span>
@@ -148,9 +144,7 @@
                         </div>
                     </div>
 
-                    <hr class="border-primary opacity-25 my-5">
-
-                    <div class="mb-5 animate-rotate delay-3">
+                    <div class="mb-5 animate-scroll delay-3">
                         <h4 class="display-7 mb-4"><i class="bi bi-translate me-2"></i>Lingue</h4>
                         <div class="ps-4">
                             <div class="mb-3">
@@ -170,7 +164,7 @@
 
                     <hr class="border-primary opacity-25 my-5">
 
-                    <div class="mb-5">
+                    <div class="mb-5 animate-scroll">
                         <h4 class="display-7 mb-4"><i class="bi bi-tools me-2"></i>Competenze</h4>
                         <div class="ps-4">
                             <div class="mb-4">
@@ -188,7 +182,7 @@
 
                     <div class="row justify-content-center">
                         <div class="col-12">
-                            <a href="./assets/cv.pdf" download class="btn btn-primary w-100 py-2 glow-button">
+                            <a href="https://drive.google.com/file/d/1JbjyjWTEPwqBZdlYGNqxrpcOnaO52oBv/view?usp=sharing" target="_blank" download class="btn btn-primary w-100 py-2 glow-button">
                                 <i class="bi bi-download me-2"></i>Scarica CV
                             </a>
                         </div>
@@ -203,7 +197,7 @@
         <i class="bi bi-sun-fill light-icon d-none"></i>
     </button>
 
-    <footer class="bg-dark py-5 mt-5">
+    <footer class="bg-footer bg-dark py-5 mt-5">
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4">
@@ -264,6 +258,7 @@
     </footer>
     
     <script src="../scripts/cursor.js"></script>
+    <script src="../scripts/background.js"></script>
     <script src="../index.js"></script>
     <script src="../scripts/animations.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

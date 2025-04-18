@@ -27,4 +27,18 @@ document.addEventListener('DOMContentLoaded', () => {
         cursorDot.style.opacity = '1';
         cursorOutline.style.opacity = '1';
     });
+
+    const interactiveElements = document.querySelectorAll('a, button, input, textarea, .hover-lift, .hover-glow');
+    
+    interactiveElements.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            cursorDot.classList.add('cursor-hover');
+            cursorOutline.classList.add('cursor-hover');
+        });
+        
+        el.addEventListener('mouseleave', () => {
+            cursorDot.classList.remove('cursor-hover');
+            cursorOutline.classList.remove('cursor-hover');
+        });
+    });
 });
