@@ -184,3 +184,9 @@ a {
 .h2.text-secondary {
     color: #9fa1b3 !important;  /* A softer, more muted color that matches your theme */
 }
+
+.sticky-top {
+    background-color: var(--background) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
