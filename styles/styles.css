@@ -1,15 +1,71 @@
 :root {
-    --text: #e8e9ef;
-    --background: #0b0c10;
-    --primary: #a6a9c1;
-    --secondary: #646345;
-    --accent: #7ea47c;
-    --bs-body-bg: #0b0c10 !important;
-    --bs-body-color: #e8e9ef !important;
-    --bs-primary: #a6a9c1 !important;
+    --text-dark: #e8e9ef;
+    --background-dark: #0b0c10;
+    --primary-dark: #a6a9c1;
+    --secondary-dark: #646345;
+    --accent-dark: #7ea47c;
+
+    --text-light: #0a090f;
+    --background-light: #fbfbfc;
+    --primary-light: #6a67a1;
+    --secondary-light: #caa8c9;
+    --accent-light: #b98dac;
+
+    --text: var(--text-dark);
+    --background: var(--background-dark);
+    --primary: var(--primary-dark);
+    --secondary: var(--secondary-dark);
+    --accent: var(--accent-dark);
+
+    --bs-body-bg: var(--background) !important;
+    --bs-body-color: var(--text) !important;
+    --bs-primary: var(--primary) !important;
     --bs-primary-rgb: 166, 169, 193 !important;
-    --bs-secondary: #646345 !important;
+    --bs-secondary: var(--secondary) !important;
     --bs-secondary-rgb: 100, 99, 69 !important;
+}
+
+[data-theme="light"] {
+    --text: var(--text-light);
+    --background: var(--background-light);
+    --primary: var(--primary-light);
+    --secondary: var(--secondary-light);
+    --accent: var(--accent-light);
+}
+
+[data-theme="light"] .card {
+    background-color: rgba(106, 103, 161, 0.1);
+}
+
+[data-theme="light"] .form-control {
+    background-color: rgba(106, 103, 161, 0.1);
+}
+
+[data-theme="light"] .card:hover {
+    box-shadow: 0 10px 20px rgba(106, 103, 161, 0.2);
+}
+
+[data-theme="light"] img.hover-effect:hover {
+    box-shadow: 0 10px 20px rgba(42, 43, 49, 0.1);
+}
+
+[data-theme="light"] footer {
+    background-color: var(--primary-light) !important;
+}
+
+[data-theme="light"] footer .bi,
+[data-theme="light"] footer a.text-light,
+[data-theme="light"] footer .text-light {
+    color: var(--background-light) !important;
+}
+
+[data-theme="light"] footer a.text-light:hover {
+    color: var(--secondary-light) !important;
+    opacity: 0.9;
+}
+
+[data-theme="light"] footer .border-secondary {
+    border-color: var(--background-light) !important;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
@@ -19,6 +75,10 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -139,10 +199,20 @@ a {
     transition: color 0.3s ease;
 }
 
+a, button, .nav-link, .btn, img {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .card {
     background-color: rgba(166, 169, 193, 0.1);
     border: 1px solid var(--primary);
     color: var(--text);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(166, 169, 193, 0.2);
 }
 
 .form-control {
@@ -163,35 +233,21 @@ a {
 .text-primary { color: var(--primary) !important; }
 .text-secondary { color: var(--secondary) !important; }
 
-.min-vh-90 {
-    min-height: 90vh;
-}
+.min-vh-90 { min-height: 90vh; }
+.mt-n5 { margin-top: -3rem; }
 
-.mt-n5 {
-    margin-top: -3rem;
-}
-
-.h2.text-secondary {
-    color: #9fa1b3 !important;
-}
+.h2.text-secondary { color: #9fa1b3 !important; }
 
 .sticky-top {
     background-color: var(--background) !important;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    transition: backdrop-filter 0.3s ease;
 }
 
-#cv hr.border-primary {
-    opacity: 0.2;
-}
-
-#cv h4 {
-    color: var(--primary);
-}
-
-#cv .bi {
-    color: var(--primary);
-}
+#cv hr.border-primary { opacity: 0.2; }
+#cv h4 { color: var(--primary); }
+#cv .bi { color: var(--primary); }
 
 .glow-button {
     box-shadow: 0 0 15px var(--primary);
@@ -202,3 +258,20 @@ a {
     transform: translateY(-3px);
     box-shadow: 0 0 30px var(--primary);
 }
+
+.theme-toggle {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1000;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+[data-theme="light"] .dark-icon { display: none; }
+[data-theme="light"] .light-icon { display: block !important; }
