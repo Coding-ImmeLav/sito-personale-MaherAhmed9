@@ -45,10 +45,6 @@
     box-shadow: 0 10px 20px rgba(106, 103, 161, 0.2);
 }
 
-[data-theme="light"] img.hover-effect:hover {
-    box-shadow: 0 10px 20px rgba(42, 43, 49, 0.1);
-}
-
 [data-theme="light"] footer {
     background-color: var(--primary-light) !important;
 }
@@ -68,6 +64,14 @@
     border-color: var(--background-light) !important;
 }
 
+[data-theme="light"] footer h5.text-primary {
+    color: var(--background-light) !important;
+}
+
+footer h5.text-primary {
+    color: var(--text) !important;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
@@ -75,6 +79,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    cursor: none;
 }
 
 html {
@@ -275,3 +280,40 @@ a, button, .nav-link, .btn, img {
 
 [data-theme="light"] .dark-icon { display: none; }
 [data-theme="light"] .light-icon { display: block !important; }
+
+
+.cursor-dot,
+.cursor-dot-outline {
+    pointer-events: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--primary);
+    z-index: 10000;
+}
+
+.cursor-dot-outline {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(166, 169, 193, 0.2);
+    z-index: 9999;
+}
+
+a:hover ~ .cursor-dot,
+button:hover ~ .cursor-dot {
+    transform: translate(-50%, -50%) scale(1.5);
+}
+
+a:hover ~ .cursor-dot-outline,
+button:hover ~ .cursor-dot-outline {
+    transform: translate(-50%, -50%) scale(1.5);
+}
