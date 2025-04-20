@@ -56,4 +56,18 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.animate-scroll').forEach((el) => {
         scrollObserver.observe(el);
     });
+
+    const stageObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+
+    document.querySelectorAll('.stage-step').forEach(step => {
+        stageObserver.observe(step);
+    });
 });
