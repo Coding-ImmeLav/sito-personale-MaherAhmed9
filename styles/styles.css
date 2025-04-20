@@ -76,7 +76,6 @@ footer h5.text-primary {
     background: linear-gradient(to bottom, #0a0c14, #000000);
 }
 
-
 [data-theme="light"] .bg-footer {
     background: linear-gradient(to bottom, #6a67a1, #4a4773);
 }
@@ -206,6 +205,56 @@ body {
     border-color: var(--primary) !important;
     color: var(--background) !important;
     transform: translateY(-2px) !important;
+}
+
+.nav-container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 0.5rem 2rem;
+    min-width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-container .nav-link {
+    color: var(--text);
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 0.4rem 1.2rem;
+    border-radius: 10px;
+}
+
+.nav-container .nav-link:hover,
+.nav-container .nav-link:focus {
+    background-color: rgba(166, 169, 193, 0.1);
+    color: var(--primary);
+}
+
+.nav-container .nav-link.active {
+    background-color: var(--primary);
+    color: var(--background);
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    padding-right: 2rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    margin-right: 2rem;
+}
+
+.nav-brand img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+[data-theme="light"] .nav-container {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.1);
 }
 
 a {
@@ -700,4 +749,29 @@ button:hover ~ .cursor-dot-outline {
     height: 100%;
     object-fit: cover;
     transition: transform 0.1s ease;
+}
+
+.github-link {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 3px 8px;
+    color: #000000;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.2s ease;
+    font-size: 0.85rem;
+}
+
+.github-link i {
+    font-size: 16px;
+    color: #000000;
+}
+
+.github-link:hover {
+    background: rgba(255, 255, 255, 1);
+    color: #000000;
+    transform: translateY(-1px);
 }
